@@ -1,14 +1,19 @@
 public class Bonus {
     public static void main(String[] args) {
-        int deposit = 1100;
+        int account = 1100;
         int balance = 100;
-        int totalBalance = deposit + balance;
+        int total = account + balance;
 
         int bonus;
-        if (deposit > 1000) {
-            bonus = deposit / 100 + totalBalance;
-        } else { bonus = totalBalance;
+        if (account > 1000) {
+            bonus = account / 100;
+        } else {
+            bonus = 0;
         }
-        System.out.println(bonus);
+        int bonus2 = total + bonus;
+        String str = String.format("Ваш бонус составил: %s.", bonus);
+        System.out.println(str);
+        String str1 = String.format("Ваш общий баланс: %s.", bonus2);
+        System.out.println(str1);
     }
 }
